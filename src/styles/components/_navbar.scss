@@ -1,0 +1,11 @@
+.navbar {
+  padding: 1em;
+  background-color: $primary-color;
+  a {
+    color: #000;
+    padding: 1em;
+  }
+  a:hover {
+    background: darken($primary-color, 5%);
+  }
+}
