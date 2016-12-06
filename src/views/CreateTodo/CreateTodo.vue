@@ -15,11 +15,16 @@ export default {
     types: Object,
   }),
   beforeMount() {
-    axios.get('http://localhost:3000/api/types')
-      .then(({ data: typesObj }) => { this.types = typesObj.types; })
-      .catch(error => { console.log(error) });
+    let vm = this;
+    fetchTodos(vm);
   },
   components: { TypeItem },
 };
+
+let fetchTodos = (vm) => {
+  axios.get('http://localhost:3000/api/types')
+    .then(({ data }) => { vm.types = data.types; })
+    .catch(error => { console.log(error) });
+}
 
 </script>
