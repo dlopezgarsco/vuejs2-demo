@@ -26,12 +26,13 @@ For detailed explanation on how things work, consult the [docs for vue-loader](h
 
 ## TODO
 
+* start node server to fetch data on npm dev run
 * full understanding of webpack cfg
 * add **ESLINT**
 * make use of production build features
 * SOC on data fetching
-* state management (vuex)
-* integrate elementUI components to enhance UI
+* state management (**vuex**)
+* integrate **elementUI** components to enhance UI
 * authentication (oauth)
 * form validation
 * i18n ??????
