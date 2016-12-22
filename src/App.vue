@@ -9,7 +9,7 @@
   </div>
 </template>
 <script>
-import Navbar from './views/components/Navbar.vue';
+import Navbar from './components/Navbar.vue';
 import Create from './views/CreateTodo/CreateTodo.vue';
 
 export default {

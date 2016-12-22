@@ -14,14 +14,14 @@ var port = process.env.PORT || 3000; // set our port
 var router = express.Router(); // get an instance of the express Router
 
 const types = {
-  robbery: {
-    name: 'Robbery',
+  foo: {
+    name: 'Foo',
   },
-  fire: {
-    name: 'Fire',
+  bar: {
+    name: 'Bar',
   },
-  owndamage: {
-    name: 'Own Damage',
+  baz: {
+    name: 'Baz',
   },
 };
 
