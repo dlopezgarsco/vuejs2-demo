@@ -1,9 +1,9 @@
 <template>
-  <div class="column-4" :id="'type-' + type ">
-    <li class="item">
+  <div class="column-1">
+    <li class="seat">
       <div>
-        <img v-bind:src="params.img" alt="Tipo">
-        <h4> {{ params.name }} </h4>
+        <img v-bind:src="params.img" alt="Asiento + ">
+        <h4> {{ rows }} </h4>
       </div>
     </li>
   </div>
@@ -11,11 +11,15 @@
 
 <script>
 export default {
-  name: 'type-item',
+  name: 'seat',
   props: {
-    type: String,
-    params: Object,
+    rows: Object,
   },
+  computed: {
+    seatNumber: function() {
+      return this.rows.letter + this.index;
+    }
+  }
 };
 
 </script>

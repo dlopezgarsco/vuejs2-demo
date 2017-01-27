@@ -4,13 +4,14 @@
       <navbar></navbar>
     </header>
     <main class="container">
-      <router-view></router-view>
+      <router-view>
+      </router-view>
     </main>
   </div>
 </template>
 <script>
 import Navbar from './components/Navbar.vue';
-import Create from './views/CreateTodo/CreateTodo.vue';
+import Create from './views/PickSeat/PickSeat.vue';
 
 export default {
   name: 'app',

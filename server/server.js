@@ -15,27 +15,41 @@ var port = process.env.PORT || 3000; // set our port
 // =============================================================================
 var router = express.Router(); // get an instance of the express Router
 
-const types = {
-  foo: {
-    name: 'Foo',
-  },
-  bar: {
-    name: 'Bar',
-  },
-  baz: {
-    name: 'Baz',
-  },
+const seats = {
+  quantity: 40,
+  rowsQuantity: 4,
+  disabledAvailability: true,
+  ascendant: true,
+  rows: [{
+    letter: 'A',
+    seats: 10,
+    taken: [1, 3, 4, 5, 9, ],
+  }, {
+    letter: 'B',
+    seats: 10,
+    taken: [1, 3, 4, 5, 9, ],
+  }, {
+    letter: 'C',
+    seats: 10,
+    taken: [1, 3, 4, 5, 9, ],
+  }, {
+    letter: 'D',
+    seats: 10,
+    taken: [1, 3, 4, 5, 9, ],
+    disabled: [1, 10]
+  }, ],
 };
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/types', function (req, res) {
-  res.json({ types });
+router.get('/seats', function (req, res) {
+  res.json({ seats });
 });
 
 // more routes for our API will happen here
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
+app.use(express.static(__dirname + '/public'));
 
 // START THE SERVER
 // =============================================================================

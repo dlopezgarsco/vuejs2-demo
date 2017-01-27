@@ -1,14 +1,14 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import CreateTodo from '../views/CreateTodo/CreateTodo.vue';
+import PickSeat from '../views/PickSeat/PickSeat.vue';
 import Home from '../views/Home.vue'
 
 Vue.use(Router);
 
 const routes = [
   { path: '/home', component: Home },
-  { path: '/create-todo', component: CreateTodo },
+  { path: '/pick-seat', component: PickSeat },
   // { path: '*', redirect: '/' },
 ];
 
